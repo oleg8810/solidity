@@ -23,14 +23,13 @@
 namespace solidity::yul::ssa
 {
 
-class LivenessAnalysis;
 class SSACFG;
 
 namespace transform
 {
 /// Rewrites every ConditionalJump whose condition is a compile-time constant into an unconditional
 /// Jump to the taken successor and detaches the edge to the dropped successor.
-void foldConstantConditions(SSACFG& _cfg, LivenessAnalysis const& _liveness);
+void foldConstantConditions(SSACFG& _cfg);
 }
 
 }
